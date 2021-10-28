@@ -22,7 +22,7 @@ public class ReturnKeypadApproach {
     }
 
     public static void main(String[] args) {
-        int num = 234;
+        int num = 23;
         List<String> combination = new ArrayList<>();
         combination( num, combination);
         System.out.println(combination);
@@ -43,6 +43,7 @@ public class ReturnKeypadApproach {
                 newCombination.add(ch+""+str);
             }
         }
+        combination.removeAll(combination);
         combination.addAll(newCombination);
         if(num <10){
             return;
